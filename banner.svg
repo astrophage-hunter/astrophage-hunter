@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="1200" height="260" role="img" aria-label="Sam">
+  <defs>
+    <linearGradient id="himmel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1e2e"/>
+      <stop offset="1" stop-color="#1d3a4f"/>
+    </linearGradient>
+    <linearGradient id="berg1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2f5d62"/>
+      <stop offset="1" stop-color="#1f4044"/>
+    </linearGradient>
+    <linearGradient id="berg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f7a6e"/>
+      <stop offset="1" stop-color="#2a5a50"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="260" rx="14" fill="url(#himmel)"/>
+  <g fill="#e8eef2" opacity="0.7">
+    <circle cx="140" cy="48" r="1.6"/><circle cx="310" cy="30" r="1.2"/><circle cx="455" cy="70" r="1.4"/>
+    <circle cx="620" cy="36" r="1.1"/><circle cx="790" cy="58" r="1.5"/><circle cx="1010" cy="34" r="1.2"/>
+    <circle cx="1120" cy="80" r="1.3"/><circle cx="560" cy="96" r="0.9"/><circle cx="230" cy="104" r="1"/>
+  </g>
+  <circle cx="960" cy="78" r="26" fill="#f2e3b3" opacity="0.9"/>
+  <path d="M0 200 L120 150 L210 176 L330 118 L450 170 L560 132 L690 182 L800 140 L930 176 L1050 128 L1200 168 L1200 260 L0 260 Z" fill="url(#berg1)"/>
+  <path d="M0 226 L150 192 L280 214 L420 180 L560 216 L700 186 L860 220 L1000 190 L1200 212 L1200 260 L0 260 Z" fill="url(#berg2)"/>
+  <text x="64" y="120" font-family="Georgia, 'Times New Roman', serif" font-size="58" fill="#f4f1ea">Servus, ich bin Sam.</text>
+</svg>
