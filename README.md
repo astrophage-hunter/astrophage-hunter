@@ -1,3 +1,3 @@
-<img src="chaos.svg" alt="SAMS" width="100%">
+<img src="banner.jpg" alt="SAMS" width="100%">
 
 Das meiste hier ist privat. 🍵
