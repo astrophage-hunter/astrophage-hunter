@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="SAMS – trinkt Tee, eskaliert trotzdem">
+  <defs>
+    <radialGradient id="himmel" cx="50%" cy="55%" r="75%">
+      <stop offset="0" stop-color="#ffe066"/>
+      <stop offset="0.25" stop-color="#ff7b00"/>
+      <stop offset="0.55" stop-color="#b3001b"/>
+      <stop offset="1" stop-color="#1a0010"/>
+    </radialGradient>
+    <radialGradient id="boom" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#fffbe0"/>
+      <stop offset="0.35" stop-color="#ffd23f"/>
+      <stop offset="0.7" stop-color="#ff5400"/>
+      <stop offset="1" stop-color="#ff5400" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="titel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff2bd6"/>
+      <stop offset="0.5" stop-color="#ffe600"/>
+      <stop offset="1" stop-color="#00f0ff"/>
+    </linearGradient>
+    <filter id="feuer" x="-30%" y="-30%" width="160%" height="160%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="3" seed="7"/>
+      <feDisplacementMap in="SourceGraphic" scale="38"/>
+    </filter>
+    <filter id="schatten" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="6" dy="8" stdDeviation="0" flood-color="#000"/>
+    </filter>
+  </defs>
+
+  <style>
+    .rotier { transform-box: fill-box; transform-origin: center; animation: drehen 18s linear infinite; }
+    .puls   { transform-box: fill-box; transform-origin: center; animation: pulsen 1.6s ease-in-out infinite; }
+    .wackel { transform-box: fill-box; transform-origin: 50% 90%; animation: wackeln 1.2s ease-in-out infinite; }
+    .hops1  { animation: hopsen 0.9s ease-in-out infinite; }
+    .hops2  { animation: hopsen 0.9s ease-in-out 0.3s infinite; }
+    .hops3  { animation: hopsen 0.9s ease-in-out 0.6s infinite; }
+    .ufo    { animation: fliegen 9s linear infinite; }
+    .auto   { animation: fahren 6s ease-in-out infinite alternate; }
+    .kanne1 { transform-box: fill-box; transform-origin: center; animation: drehen 2.4s linear infinite; }
+    .kanne2 { transform-box: fill-box; transform-origin: center; animation: drehen 2.4s linear infinite reverse; }
+    .laser  { stroke-dasharray: 18 14; animation: strahl 0.6s linear infinite; }
+    .titel  { transform-box: fill-box; transform-origin: center; animation: zittern 2.2s ease-in-out infinite; }
+    .blitz  { animation: blinken 1.8s ease-in-out infinite; }
+
+    @keyframes drehen  { to { transform: rotate(360deg); } }
+    @keyframes pulsen  { 0%,100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+    @keyframes wackeln { 0%,100% { transform: rotate(-7deg); } 50% { transform: rotate(7deg); } }
+    @keyframes hopsen  { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-22px); } }
+    @keyframes fliegen { from { transform: translateX(-200px); } to { transform: translateX(1400px); } }
+    @keyframes fahren  { from { transform: translateX(0); } to { transform: translateX(90px); } }
+    @keyframes strahl  { to { stroke-dashoffset: -32; } }
+    @keyframes zittern { 0%,100% { transform: rotate(-4deg) scale(1); } 50% { transform: rotate(-2deg) scale(1.05); } }
+    @keyframes blinken { 0%,100% { opacity: 1; } 50% { opacity: 0.25; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+    .emo { font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif; }
+  </style>
+
+  <rect width="1200" height="420" rx="18" fill="url(#himmel)"/>
+
+  <!-- Strahlenkranz -->
+  <g class="rotier" opacity="0.35" fill="#fff3b0">
+    <polygon points="600,230 640,-400 560,-400"/>
+    <polygon points="600,230 1240,190 1240,270"/>
+    <polygon points="600,230 560,860 640,860"/>
+    <polygon points="600,230 -40,270 -40,190"/>
+    <polygon points="600,230 1100,-250 1160,-190"/>
+    <polygon points="600,230 1160,650 1100,710"/>
+    <polygon points="600,230 100,710 40,650"/>
+    <polygon points="600,230 40,-190 100,-250"/>
+  </g>
+
+  <!-- Explosion -->
+  <g class="puls">
+    <circle cx="600" cy="225" r="200" fill="url(#boom)" filter="url(#feuer)"/>
+    <circle cx="600" cy="225" r="120" fill="#fff6c2" filter="url(#feuer)" opacity="0.85"/>
+  </g>
+
+  <!-- UFO -->
+  <text class="ufo emo" x="0" y="70" font-size="54">🛸</text>
+
+  <!-- Laser aus den Augen -->
+  <g stroke-width="7" stroke-linecap="round">
+    <line class="laser" x1="580" y1="190" x2="140" y2="20" stroke="#ff2bd6"/>
+    <line class="laser" x1="622" y1="190" x2="1080" y2="20" stroke="#00f0ff"/>
+  </g>
+
+  <!-- Skelett mit zwei Teekannen -->
+  <g class="wackel">
+    <text class="emo" x="600" y="290" font-size="180" text-anchor="middle">💀</text>
+  </g>
+  <g class="kanne1"><text class="emo" x="430" y="260" font-size="84" text-anchor="middle">🫖</text></g>
+  <g class="kanne2"><text class="emo" x="770" y="260" font-size="84" text-anchor="middle">🫖</text></g>
+
+  <!-- Blitze -->
+  <text class="blitz emo" x="330" y="120" font-size="60">⚡</text>
+  <text class="blitz emo" x="820" y="130" font-size="60">⚡</text>
+  <text class="emo" x="250" y="210" font-size="56">💥</text>
+  <text class="emo" x="905" y="225" font-size="56">💥</text>
+
+  <!-- Katzen -->
+  <g class="hops1"><text class="emo" x="70" y="200" font-size="78">😼</text></g>
+  <g class="hops2"><text class="emo" x="1040" y="205" font-size="78">🐱</text></g>
+  <g class="hops3"><text class="emo" x="1100" y="330" font-size="64">😸</text></g>
+
+  <!-- Dino und Auto -->
+  <text class="emo" x="960" y="395" font-size="92">🦖</text>
+  <g class="auto"><text class="emo" x="40" y="395" font-size="88">🏎️</text><text class="emo" x="0" y="390" font-size="44">💨</text></g>
+
+  <!-- Feuer unten -->
+  <g class="emo" font-size="46">
+    <text x="300" y="410">🔥</text><text x="380" y="414">🔥</text><text x="460" y="408">🔥</text>
+    <text x="700" y="410">🔥</text><text x="780" y="414">🔥</text><text x="860" y="408">🔥</text>
+  </g>
+
+  <!-- Titel -->
+  <g class="titel" filter="url(#schatten)">
+    <text x="600" y="385" text-anchor="middle" font-family="Impact, 'Arial Black', sans-serif" font-size="128" font-weight="900"
+          fill="url(#titel)" stroke="#000" stroke-width="7" paint-order="stroke" letter-spacing="10">SAMS</text>
+  </g>
+  <text x="600" y="412" text-anchor="middle" font-family="'Comic Sans MS', 'Arial Black', sans-serif" font-size="22"
+        fill="#fff" stroke="#000" stroke-width="4" paint-order="stroke">trinkt Tee. eskaliert trotzdem. 🍵</text>
+</svg>
